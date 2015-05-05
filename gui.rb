@@ -283,11 +283,7 @@ class String
   end
 
   def colorize_back(color_code)
-    if OS.windows?
-      "\e[#{color_code};47m#{self}\e[0m"
-    else
-      self
-    end
+    "\e[#{color_code};47m#{self}\e[0m"
   end
 
   def red
